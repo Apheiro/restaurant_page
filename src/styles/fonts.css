@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Monograf';
+    src: url('../font/MonografRegular.ttf') format('ttf'),
+         url('../font/MonografRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: mono-space;
+}
+
+@font-face {
+    font-family: 'Monograf';
+    src: url('../font/MonografBold.ttf') format('ttf'),
+         url('../font/MonografBold.woff') format('woff');
+    font-weight: 600;
+    font-style: mono-space;
+}
