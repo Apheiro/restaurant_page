@@ -10,7 +10,7 @@
 
 ## Demo
 
-👁️ [Live Demo]()
+👁️ [Live Demo](https://apheiro.github.io/restaurant_page/)
 
 ## Built with
 
