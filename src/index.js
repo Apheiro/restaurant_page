@@ -14,9 +14,9 @@ function switchPages(e) {
     const navBtnContainer = document.querySelector('.navBtnContainer');
     if (e.target.classList.contains('homeBtn')) {
         if (navBtnContainer.classList.contains('topMenuActive')) {navBtnContainer.classList.toggle('topMenuActive')}
-        if (!body.children[2].classList.contains('home')) {
-            if (body.children[2].classList.contains('about') || body.children[2].classList.contains('contact')) {
-                body.removeChild(body.children[2]);
+        if (!body.children[1].classList.contains('home')) {
+            if (body.children[1].classList.contains('about') || body.children[1].classList.contains('contact')) {
+                body.removeChild(body.children[1]);
                 about.classList.remove('active');
                 contact.classList.remove('active');
                 home.classList.add('active');
@@ -26,9 +26,9 @@ function switchPages(e) {
     }
     if (e.target.classList.contains('aboutBtn')) {
         if (navBtnContainer.classList.contains('topMenuActive')) {navBtnContainer.classList.toggle('topMenuActive')}
-        if (!body.children[2].classList.contains('about')) {
-            if (body.children[2].classList.contains('home') || body.children[2].classList.contains('contact')) {
-                body.removeChild(body.children[2]);
+        if (!body.children[1].classList.contains('about')) {
+            if (body.children[1].classList.contains('home') || body.children[1].classList.contains('contact')) {
+                body.removeChild(body.children[1]);
                 about.classList.add('active');
                 contact.classList.remove('active');
                 home.classList.remove('active');
@@ -38,9 +38,9 @@ function switchPages(e) {
     }
     if (e.target.classList.contains('contactBtn')) {
         if (navBtnContainer.classList.contains('topMenuActive')) {navBtnContainer.classList.toggle('topMenuActive')}
-        if (!body.children[2].classList.contains('contact')) {
-            if (body.children[2].classList.contains('about') || body.children[2].classList.contains('home')) {
-                body.removeChild(body.children[2]);
+        if (!body.children[1].classList.contains('contact')) {
+            if (body.children[1].classList.contains('about') || body.children[1].classList.contains('home')) {
+                body.removeChild(body.children[1]);
                 about.classList.remove('active');
                 contact.classList.add('active');
                 home.classList.remove('active');
