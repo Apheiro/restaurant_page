@@ -1,4 +1,468 @@
 * {
     font-family: 'Monograf';
-    font-weight: 400;
+    box-sizing: border-box;
+    color: #D9D9D9;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    background-color: #232323;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(94, 94, 94, 0.24);
+    position: absolute;
+    right: 0px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #79C8C5;
+    border-radius: 10px;
+}
+/*---------------------navbar---------------------*/
+.navbar {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+
+.companyLogo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.navBtnContainer {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.topMenu {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #232323;
+    height: fit-content;
+    padding: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s;
+    transform: translateY(-416px);
+}
+
+.topMenuActive{
+    transform: translateY(0px);
+}
+
+.navBtnContainer li button {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.active {
+    color: #76fffa;
+}
+/*---------------------navbar---------------------*/
+/*---------------------home section---------------------*/
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    height: fit-content !important;
+    padding-inline: 220px;
+    justify-content: space-evenly;
+    user-select: none;
+    flex-wrap: wrap;
+}
+
+.description {
+    width: 500px;
+}
+
+.descriptionTitle {
+    font-size: clamp(30px, 4vw, 68px);
+    opacity: 0;
+}
+
+.descriptionContent{
+    opacity: 0;
+}
+.swiper-slide img{
+    transition: transform 0.2s !important;
+}
+.swiper-slide img:hover{
+    cursor: pointer;
+    transform: scale(1.1) !important;
+}
+
+.hamburgerImg{
+    opacity: 0;
+}
+
+.description hr {
+    border: solid #79C8C5 1px;
+    margin-bottom: 15px;
+    transform: scaleX(0);
+}
+
+.wave1,
+.wave2,
+.wave3,
+.wave4 {
+    position: absolute;
+}
+
+.wave1 {
+    transition: width 0.5s;
+    width: 270px;
+    left: 0;
+    top: 0;
+}
+
+.wave2 {
+    transition: width 0.5s;
+    width: 430px;
+    right: 0;
+    top: 0;
+}
+
+.wave3 {
+    transition: width 0.5s;
+    width: 331px;
+    left: 0;
+    bottom: 0;
+}
+
+.wave4 {
+    transition: width 0.5s;
+    width: 282px;
+    right: 0;
+    bottom: 0;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: unset !important;
+}
+
+.swiper-button-prev {
+    transition: left 0.5s;
+    left: 10% !important;
+    opacity: 0;
+}
+
+.swiper-button-next {
+    transition: right 0.5s;
+    right: 10% !important;
+    opacity: 0;
+}
+
+.swiper-pagination {
+    bottom: 120px !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    transition: transform 0.5s !important;
+    background: #79C8C5 !important;
+    transform: scale(1.25);
+}
+
+.nextBtn {
+    transition: width 0.5s;
+    width: 32px;
+    transform: rotateY(180deg);
+}
+
+.prevBtn{
+    transition: width 0.5s;
+    width: 32px;
+}
+
+/*---------------------home section---------------------*/
+/*---------------------about section---------------------*/
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info1 {
+    position: absolute;
+    top: 150px;
+    left: 10%;
+    margin-right: 50px;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    max-width: 522px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.13);
+    opacity: 0;
+}
+
+.info2 {
+    position: absolute;
+    bottom: 150px;
+    right: 10%;
+    margin-left: 50px;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    max-width: 570px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.13);
+    opacity: 0;
+}
+
+.info1Title,
+.info2Title {
+    font-size: 50px;
+}
+
+.info1Description,
+.info2Description {
+    font-size: 20px;
+}
+
+.pathLine{
+    stroke:#79C8C5;
+    stroke-width: 0.5;
+    stroke-dasharray: 6096.39990234375;
+    stroke-dashoffset: 6096.39990234375;
+    fill: #79C8C5;
+    fill-opacity: 0;
+}
+
+@keyframes drawStroke {
+   to{
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    }
+}
+/*---------------------about section---------------------*/
+/*---------------------contact section---------------------*/
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.form {
+    max-width: 870px;
+    width: 100%;
+    padding: 60px 80px;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    opacity: 0;
+}
+
+.form input {
+    padding: 0 20px;
+    background-color: #232323;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    opacity: 0;
+}
+
+.form textarea {
+    padding: 20px 20px;
+    resize: none;
+    background-color: #232323;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    opacity: 0;
+}
+
+.contactData {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 55px;
+    gap: 60px;
+}
+
+.subjectAndSubmit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.subjectInput {
+    width: 100%;
+    height: 150px;
+}
+
+.submit {
+    text-align: center;
+    background-color: #232323 !important;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    opacity: 0;
+}
+
+.footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2;
+    width: 100vw;
+}
+/*---------------------contact section---------------------*/
+
+@media (max-height:900px), (max-width:755px) {
+    .info1 {
+        top: 75px;
+        border-radius: 10px;
+        max-width: 522px;
+        padding: 10px;
+        margin-right: 10%;
+    }
+
+    .lineScroll1{
+        width: 250px;
+    }
+
+    .info2 {
+        bottom: 75px;
+        border-radius: 10px;
+        max-width: 570px;
+        padding: 10px;
+        margin-left: 10%;
+    }
+
+    .info1Title,
+    .info2Title {
+        font-size: 25px;
+    }
+
+
+    .info1Description,
+    .info2Description {
+        font-size: 13px;
+    }
+    .footer {
+        font-size: 13px;
+    }
+    .lineScroll2{
+        max-width: 511px;
+        width: 100%;
+    }
+    .form{
+        padding: 30px 40px;
+        gap: 20px;
+    }
+    .contactData {
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .subjectAndSubmit{
+        gap: 20px;
+    }
+}
+
+@media (max-height:750px), (max-width:755px) {
+    .swiper-slide {
+        padding-inline: 50px;
+    }
+
+    .swiper-button-next{
+        right: 2% !important;
+    }
+
+    .nextBtn{
+        width: 20px;
+    }
+
+    .swiper-button-prev {
+        left: 2% !important;
+    }
+
+    .prevBtn {
+        width: 20px;
+    }
+
+    .descriptionContent{
+        font-size: 13px;
+    }
+
+    .wave1 {
+        width: 200px;
+    }
+
+    .wave2 {
+        width: 250px;
+    }
+
+    .wave3 {
+        width: 200px;
+    }
+
+    .wave4 {
+        width: 200px;
+    }
+
 }
